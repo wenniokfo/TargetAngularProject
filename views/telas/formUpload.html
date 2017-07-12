@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <!-- Compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+       <!-- Compiled and minified JavaScript -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+       <script  src="../../js/controllers/uploadCtrl.js" type="text/javascript"/>                                                                        </script>
+  </head>
+  <body ng-controller="uploadCtrl">
+    <ng-include src="'views/componentes/header.html'"></ng-include>
+    <section>
+     <div class="row" >
+      <div class="col s12 m4 l8 espaco-de-trabalho">
+        <form>
+         <div class="file-field input-field">
+           <div class="btn">
+             <span>File</span>
+             <input type="file" ng-model="file"/>
+           </div>
+           <div class="file-path-wrapper">
+             <input class="file-path validate" type="text"/>
+           </div>
+         </div>
+         <button class="btn waves-effect waves-light" type="submit" ng-click="loadFile(file)" >Submit
+           <i class="material-icons right">send</i>
+         </button>
+       </form>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>
