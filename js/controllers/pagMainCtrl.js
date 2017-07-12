@@ -1,5 +1,4 @@
-angular.module("MyApp")
-  .controller("pagMainCtrl", function ($scope, $rootScope, $http, $localStorage) {
+angular.module("MyApp").controller("pagMainCtrl", function ($scope, $rootScope, $http, $localStorage) {
     $scope.app="Creative Riquerement";
     $scope.discussao= $localStorage.discussao;
     $scope.discussoes= $localStorage.discussoes;
