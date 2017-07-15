@@ -11,6 +11,11 @@ angular.module("MyApp").controller("pagMainCtrl", function ($scope, $rootScope, 
     $scope.ideiaDetalhe = $localStorage.ideiaDetalhe;
 
   })
+  controller('uploadCtrl', function () {
+      function loadFile(){
+        console.log("Entrou no Load");
+      };
+  })
   .controller('materializeCtrl', function ($scope) {
     $scope.openModal = function ($event) {
       var modalInstance = $modal.open({

@@ -2,16 +2,14 @@
 <html ng-app="MyApp">
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- font Awesome -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Morris chart -->
-        <link href="css/morris/morris.css" rel="stylesheet" type="text/css" />
+        <!-- <link href="css/morris/morris.css" rel="stylesheet" type="text/css" /> -->
         <!-- jvectormap -->
         <link href="css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
         <!-- fullCalendar -->
@@ -29,38 +27,8 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-        <meta charset="utf-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">                                              </meta>
-        <title>oRIGAmI</title>
-        <link rel="icon" type="image/png" href="pictures/origami.png">                                                      </link>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">                              </link>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
-        <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection">                             </link>
-        <link rel="stylesheet" href="css/materialize2.min.css">    </link>
-        <link rel="stylesheet" href="css/materialize.min.css"> </link>
-        <link rel="stylesheet" href="bower_components/ng-materialize/src/ng-materialize.scss">                              </link>
-        <link rel="stylesheet" href="bower_components/angular.snackbar-master/css/angular.snackbar.js"></link>
-
-        <script  src="js/baseJs/jquery.js">                                                                                 </script>
-        <script  src="bower_components/angular/angular.min.js">                                                             </script>
-        <script  src="bower_components/ng-materialize/src/ng-materialize.js">                                               </script>
-        <script  src="bower_components/ngstorage/ngStorage.min.js">                                                         </script>
-        <script  src="bower_components/angular-jwt/dist/angular-jwt.min.js">                                                </script>
-        <script  src="bower_components/angular.snackbar-master/angular.snackbar.min.js">                                    </script>
-
-        <script  src="lib/angular/angular-route.js">                                                                        </script>
-        <script  src="js/app.js">                                                                                           </script>
-        <script  src="js/controllers/pagMainCtrl.js">                                                                       </script>
-        <script  src="js/controllers/uploadCtrl.js">                                                                       </script>
-        <script  src="js/controllers/loginCtrl.js">                                                                         </script>
-        <script  src="js/controllers/perfilCtrl.js">                                                                        </script>
-        <script  src="js/controllers/materializeCtrl.js">                                                                   </script>
-        <script  src="js/service/serviceLogin.js">                                                                          </script>
-        <script  src="js/service/constantesService.js" >                                                                    </script>
-        <script  src="js/config/routeConfig.js">                                                                            </script>
-        <script  src="js/baseJs/base.js">                                                                                   </script>
     </head >
-    <body ng-controller="pagMainCtrl" class="skin-black">
+    <body ng-controller="uploadCtrl" class="skin-black">
       <!-- <div ng-view ></div> -->
         <!-- header logo: style can be found in header.less -->
         <header class="header">
@@ -93,7 +61,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                                                    <!-- <img src="img/avatar3.png" class="img-circle" alt="User Image"/> -->
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -105,7 +73,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <!-- <img src="img/avatar2.png" class="img-circle" alt="user image"/> -->
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -117,7 +85,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="pictures/default_user.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -129,7 +97,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar2.png" class="img-circle" alt="user image"/>
+                                                    <img src="pictures/default_user.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -141,7 +109,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="pictures/default_user.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -276,7 +244,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <!-- <img src="img/avatar3.png" class="img-circle" alt="User Image" /> -->
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -317,7 +285,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                            <!-- <img src="img/avatar3.png" class="img-circle" alt="User Image" /> -->
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Jane</p>
@@ -333,7 +301,12 @@
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treview">
+                            <a href="views/telas/formUpload.html">
+                                <i class="fa fa-dashboard"></i> <span>LOAD</span>
+                            </a>
+                        </li>
+                        <!-- <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
                                 <span>Charts</span>
@@ -343,14 +316,14 @@
                                 <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
                                 <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
                             </ul>
-                        </li>
-                        <li>
+                        </li> -->
+                        <!-- <li>
                             <a href="pages/mailbox.html">
                                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
                                 <small class="badge pull-right bg-yellow">12</small>
                             </a>
-                        </li>
-                        <li class="treeview">
+                        </li> -->
+                        <!-- <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i> <span>Examples</span>
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -364,7 +337,7 @@
                                 <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
                                 <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </section>
                 <!-- /.sidebar -->
@@ -604,7 +577,7 @@
                                 <div class="box-body chat" id="chat-box">
                                     <!-- chat item -->
                                     <div class="item">
-                                        <img src="img/avatar.png" alt="user image" class="online"/>
+                                        <!-- <img src="img/avatar.png" alt="user image" class="online"/> -->
                                         <p class="message">
                                             <a href="#" class="name">
                                                 <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
@@ -626,7 +599,7 @@
                                     </div><!-- /.item -->
                                     <!-- chat item -->
                                     <div class="item">
-                                        <img src="img/avatar2.png" alt="user image" class="offline"/>
+                                        <!-- <img src="img/avatar2.png" alt="user image" class="offline"/> -->
                                         <p class="message">
                                             <a href="#" class="name">
                                                 <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
@@ -639,7 +612,7 @@
                                     </div><!-- /.item -->
                                     <!-- chat item -->
                                     <div class="item">
-                                        <img src="img/avatar3.png" alt="user image" class="offline"/>
+                                        <!-- <img src="img/avatar3.png" alt="user image" class="offline"/> -->
                                         <p class="message">
                                             <a href="#" class="name">
                                                 <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
@@ -671,7 +644,22 @@
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
-        <!-- add new calendar event modal -->
+        <!-- MY SCRIPT-->
+        <script  src="js/baseJs/jquery.js">                                                                                 </script>
+        <script  src="bower_components/angular/angular.min.js">                                                             </script>
+        <script  src="bower_components/ng-materialize/src/ng-materialize.js">                                               </script>
+        <script  src="bower_components/ngstorage/ngStorage.min.js">                                                         </script>
+        <script  src="bower_components/angular-jwt/dist/angular-jwt.min.js">                                                </script>
+        <script  src="bower_components/angular.snackbar-master/angular.snackbar.min.js">                                    </script>
+        <script  src="lib/angular/angular-route.js">                                                                        </script>
+        <script  src="js/app.js">                                                                                           </script>
+        <script  src="js/controllers/pagMainCtrl.js">                                                                       </script>
+        <script  src="js/controllers/uploadCtrl.js">                                                                        </script>
+        <script  src="js/controllers/loginCtrl.js">                                                                         </script>
+        <script  src="js/service/serviceLogin.js">                                                                          </script>
+        <script  src="js/service/constantesService.js" >                                                                    </script>
+        <script  src="js/config/routeConfig.js">                                                                            </script>
+        <script  src="js/baseJs/base.js">                                                                                   </script>
 
 
         <!-- jQuery 2.0.2 -->
@@ -681,8 +669,8 @@
         <!-- Bootstrap -->
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!-- Morris.js charts -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-        <script src="js/plugins/morris/morris.min.js" type="text/javascript"></script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="js/plugins/morris/morris.min.js" type="text/javascript"></script> -->
         <!-- Sparkline -->
         <script src="js/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
         <!-- jvectormap -->
