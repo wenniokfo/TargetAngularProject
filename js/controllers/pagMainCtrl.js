@@ -10,11 +10,30 @@ angular.module("MyApp").controller("pagMainCtrl", function ($scope, $rootScope, 
     $scope.perfis = $localStorage.perfis;
     $scope.ideiaDetalhe = $localStorage.ideiaDetalhe;
 
+    function pegarArquivo(arquivoSelecionado) {
+      if(arquivoSelecionado.files){
+         var file = arquivoSelecionado.files[0];
+         document.getElementById('atributos').innerHTML =
+                               '  nome do arquivo: '+file.name +
+                               ';  tipo do arquivo: '+file.type +
+                               ';  tamanho do arquivo: '+file.size + ' bytes'
+                     }
+      }
+
   })
-  controller('uploadCtrl', function () {
-      function loadFile(){
-        console.log("Entrou no Load");
-      };
+  .controller('uploadCtrl', function () {
+
+    console.log("carregando arquivo");
+
+    // function pegarArquivo(arquivoSelecionado) {
+    //   if(arquivoSelecionado.files){
+    //      var file = arquivoSelecionado.files[0];
+    //      document.getElementById('atributos').innerHTML =
+    //                            '  nome do arquivo: '+file.name +
+    //                            ';  tipo do arquivo: '+file.type +
+    //                            ';  tamanho do arquivo: '+file.size + ' bytes'
+    //                  }
+    //   }
   })
   .controller('materializeCtrl', function ($scope) {
     $scope.openModal = function ($event) {
