@@ -230,7 +230,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
-                                    <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <img class="img-circle" alt="User Image" />
                                     <p>
                                         Jane Doe - Web Developer
                                         <small>Member since Nov. 2012</small>
@@ -298,22 +298,55 @@
                     <h1>
                         Load File to Generate Charts
                     </h1>
-                    <section ng-controller="uploadCtrl">
+                    <section ng-controller="pag">
                      <div class="row" >
                       <div class="col s12 m4 l8">
                         <form>
                          <div class="file-field input-field">
                            <div class="btn">
                              <span>File</span>
-                             <input type="file" ng-model="file"/>
+                             <input  id="fileinput" type="file" ng-model="file"/>
                            </div>
                            <div class="col 2">
-                             <button ng-model="file" class="btn waves-effect waves-light" type="submit" ng-click="pegarArquivo(this.file)">Load File</button>
+                             <button id="loadfile" ng-model="file" class="btn waves-effect waves-light" onclick="loadInformationPage()" >Load File</button>
                            </div>
                          </div>
                        </form>
+
                       </div>
                     </div>
+                     <div id="ReadResult"></div>
+                     <script type="text/javascript">
+                         function readSingleFile(evt) {
+                             //Retrieve the first (and only!) File from the FileList object
+                             var f = evt.target.files[0];
+
+                             if (f) {
+                                 var r = new FileReader();
+                                 r.onload = function (e) {
+                                     var contents = e.target.result;
+                                     document.getElementById("ReadResult").innerHTML = contents;
+                                 }
+                                 r.readAsText(f);
+                             } else {
+                                 alert("Failed to load file");
+                             }
+                         }
+                         document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+
+                         function loadInformationPage() {
+                           console.log('Tomaaaaaaaaaaaa');
+                           var qtdTestCase = document.getElementsByTagName('h3');
+                           var testcases = 0;
+
+                           for (var i = 0; i < qtdTestCase.length; i++) {
+                               testcases++;
+                               var nametestecase = qtdTestCase.item(i);
+                           }
+                           alert("QTD testes cases is "+ testcases);
+                           console.log("Testes cases: " + testcases);
+                         }
+                        </script>
                     </section>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>

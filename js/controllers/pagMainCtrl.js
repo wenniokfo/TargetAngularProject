@@ -1,39 +1,35 @@
 angular.module("MyApp").controller("pagMainCtrl", function ($scope, $rootScope, $http, $localStorage) {
-    $scope.app="Creative Riquerement";
-    $scope.discussao= $localStorage.discussao;
-    $scope.discussoes= $localStorage.discussoes;
-    $scope.brainstorming = $localStorage.brainstorming;
-    $scope.ideaAdvocate = null;
-    $scope.participacoes = null;
-    $scope.ideias= $localStorage.ideias;
-    $scope.user = $localStorage.usuarioLogado;
-    $scope.perfis = $localStorage.perfis;
-    $scope.ideiaDetalhe = $localStorage.ideiaDetalhe;
+    $scope.app="Target";
+    $scope.qtdTestCases = 0;
+    $scope.arrayTituloTestesCases = null;
 
-    function pegarArquivo(arquivoSelecionado) {
-      if(arquivoSelecionado.files){
-         var file = arquivoSelecionado.files[0];
-         document.getElementById('atributos').innerHTML =
-                               '  nome do arquivo: '+file.name +
-                               ';  tipo do arquivo: '+file.type +
-                               ';  tamanho do arquivo: '+file.size + ' bytes'
-                     }
-      }
+    function readSingleFile(evt) {
+      console.log("chamou readSingleFile");
 
-  })
-  .controller('uploadCtrl', function () {
+              //Retrieve the first (and only!) File from the FileList object
+              var f = evt.target.files[0];
+              if (f) {
+                  var r = new FileReader();
+                  r.onload = function (e) {
+                      var contents = e.target.result;
+                      document.getElementById("ReadResult").innerHTML = contents;
 
-    console.log("carregando arquivo");
-
-    // function pegarArquivo(arquivoSelecionado) {
-    //   if(arquivoSelecionado.files){
-    //      var file = arquivoSelecionado.files[0];
-    //      document.getElementById('atributos').innerHTML =
-    //                            '  nome do arquivo: '+file.name +
-    //                            ';  tipo do arquivo: '+file.type +
-    //                            ';  tamanho do arquivo: '+file.size + ' bytes'
-    //                  }
-    //   }
+                    // var qtdTestCase = contents.getElementsByTagName('h3');
+                    // var testcases = 0;
+                    //
+                    // for (var i = 0; i < qtdTestCase.length; i++) {
+                    //     testcases++;
+                    //     var nametestecase = qtdTestCase.item(i);
+                    //     scope.arrayTituloTestesCases.push(testecase);
+                    // }
+                    // $scope.qtdTestCase = testecases;
+                    // alert("QTD testes cases is "+ testecase);
+                  }
+                  r.readAsText(f);
+              } else {
+                  alert("Failed to load file");
+              }
+          }
   })
   .controller('materializeCtrl', function ($scope) {
     $scope.openModal = function ($event) {
