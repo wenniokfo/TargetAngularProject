@@ -316,6 +316,9 @@
                       </div>
                     </div>
                      <div id="ReadResult"></div>
+
+                     <!-- /* Inicio do Script */ -->
+                     
                      <script type="text/javascript">
                          function readSingleFile(evt) {
                              //Retrieve the first (and only!) File from the FileList object
@@ -335,21 +338,36 @@
                          document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
 
                          function loadInformationPage() {
-                           console.log('Tomaaaaaaaaaaaa');
-                           var qtdTestCase = document.getElementsByTagName('h3');
+                           console.log("lendo informações da pagina");
                            var testcases = 0;
+                           /*
+                           *
+                           INICIO : pegando quantidade de testes Cases gerados no arquivo
+                           *
+                           */
 
-                           for (var i = 0; i < qtdTestCase.length; i++) {
-                               testcases++;
-                               var nametestecase = qtdTestCase.item(i);
-                           }
-                           alert("QTD testes cases is "+ testcases);
-                           console.log("Testes cases: " + testcases);
-                         }
+                           var nodes = document.getElementsByTagName('H3');
+                           for (var i = 0; i < nodes.length; ++i) {
+                             // Calling myNodeList.item(i) isn't necessary in JavaScript
+                              var item = nodes[i];
+                              var conteudo = item.firstChild.nodeValue; //pega o conteudo do H3
+
+                              if (conteudo && conteudo.includes('Test Case ID')) {
+                                console.log(conteudo);
+                                testcases++;
+                              }
+
+                            }
+                            /*
+                            *
+                            FIM : pegando quantidade de testes Cases gerados no arquivo
+                            *
+                            */
+                         };
                         </script>
                     </section>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
                         <li><a href="#">Examples</a></li>
                         <li class="active">Blank page</li>
                     </ol>
